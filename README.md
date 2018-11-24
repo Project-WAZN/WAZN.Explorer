@@ -1,8 +1,29 @@
-# [MoneroVision](https://mycryptohq.github.io/MoneroVision/)
+TO DO BEFORE V1 IS DEPLOYED:
+
+---customize all icons, logos and graphics
+
+---be creative :P
+
+---check api links
+
+---google-site-verification content="getyourwaznone
+
+---recheck everything!!!
+
+---test with WAZN settings on testnet
+
+---merge to https://github.com/Project-WAZN/WAZN.Explorer and mark it as 1.0.0
+
+
+
+
+
+
+# [WAZN Explorer](https://explorer.wazn.io)
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
-MoneroVision is a block explorer for Monero
+WAZN Explorer is a block explorer for WAZN.
 
 ## Contributing
 
@@ -13,11 +34,11 @@ If you're new to open source, check out some of these resources to help you get 
 
 ### Open and Transparent
 
-All of our work happens directly on [GitHub](https://github.com/MyCryptoHQ/MoneroVision). All pull requests by core team members and external contributors go through the same review process.
+All of our work happens directly on [GitHub](https://github.com/Project-WAZN/WAZN.Explorer) and/or on [GitHub](https://github.com/MyCryptoHQ/MoneroVision). All pull requests by core team members and external contributors go through the same review process.
 
 ### Branch Organization
 
-Pull requests should be made against the [master branch](https://github.com/MyCryptoHQ/MoneroVision/tree/master).
+Pull requests should be made against the [master branch](https://github.com/Project-WAZN/WAZN.Explorer/tree/master).
 
 ### Build and Run
 
@@ -29,8 +50,8 @@ Pull requests should be made against the [master branch](https://github.com/MyCr
 Get source code and download dependencies:
 
 ```
-git clone https://github.com/MyCryptoHQ/MoneroVision.git
-cd MoneroVision
+git clone https://github.com/Project-WAZN/WAZN.Explorer
+cd WAZN.Explorer
 npm i
 ```
 
@@ -50,9 +71,9 @@ Generates a minified build in `./dist`
 
 ## Feedback
 
-* Request new features on [GitHub](https://github.com/MyCryptoHQ/MoneroVision/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
-* Join our [Discord](https://discord.gg/hGV8C5c)
-* Send us a tweet [@MyCrypto](https://twitter.com/mycrypto?lang=en)
+* Request new features on [GitHub](https://github.com/Project-WAZN/WAZN.Explorer/issues)
+* Join our [Discord](https://discordapp.com/channels/512852688694673419/512852689143726091)
+* Tweet us [@Project_WAZN](https://twitter.com/Project_WAZN)
 
 ## Related Projects
 
@@ -60,4 +81,4 @@ Generates a minified build in `./dist`
 
 ## License
 
-MoneroVision is [MIT licensed](./LICENSE).
+WAZN Explorer is [MIT licensed](./LICENSE).

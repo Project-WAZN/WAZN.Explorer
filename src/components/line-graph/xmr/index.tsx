@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { fetchAsync } from 'utils/functions';
 import { LineGraph, Point } from '..';
-import './xmr.scss';
+import './wazn.scss';
 
 interface Props {
   width: number;
@@ -13,7 +13,7 @@ interface State {
   data: Point[];
 }
 
-export class MoneroGraph extends React.Component<Props, State> {
+export class WaznGraph extends React.Component<Props, State> {
   public state = {
     fetchingData: false,
     data: [] as Point[]
@@ -31,7 +31,7 @@ export class MoneroGraph extends React.Component<Props, State> {
           this.setState({ fetchingData: false });
           this.setState({ data: this.formatRawData(json.Data) });
         } else {
-          throw new Error('Failed to fetch XMR data');
+          throw new Error('Failed to fetch WAZN data');
         }
       })
       .catch(error => {
@@ -58,21 +58,21 @@ export class MoneroGraph extends React.Component<Props, State> {
     const high = data[0] ? data.reduce((max, p) => (p[1] > max ? p[1] : max), data[0][1]) : 0;
 
     return !fetchingData && !!data[0] ? (
-      <div className="xmr-price">
-        <div className="xmr-price-header">
-          <p className="title">Monero Price</p>
+      <div className="wazn-price">
+        <div className="wazn-price-header">
+          <p className="title">WAZN Price</p>
           <div className="flex-spacer" />
           <p className="time">7d</p>
         </div>
-        <div className="xmr-price-data">
+        <div className="wazn-price-data">
           <div className="left">
-            <h2 className="xmr-price-data-current">
+            <h2 className="wazn-price-data-current">
               {current.toLocaleString(
                 'us-EN',
                 { style: 'currency', currency: 'USD' }
               )}
             </h2>
-            <p className={`xmr-price-data-difference ${diff > 0 ? 'positive' : 'negative'}`}>
+            <p className={`wazn-price-data-difference ${diff > 0 ? 'positive' : 'negative'}`}>
               {diff.toLocaleString(
                 'us-EN',
                 { style: 'currency', currency: 'USD' }
@@ -82,7 +82,7 @@ export class MoneroGraph extends React.Component<Props, State> {
           </div>
           <div className="flex-spacer" />
           <div className="right">
-            <div className="xmr-price-data-high">
+            <div className="wazn-price-data-high">
               <span className="label">High</span>
               <div className="flex-spacer" />
               <span className="value">
@@ -92,7 +92,7 @@ export class MoneroGraph extends React.Component<Props, State> {
                 )}
               </span>
             </div>
-            <div className="xmr-price-data-low">
+            <div className="wazn-price-data-low">
               <span className="label">Low</span>
               <div className="flex-spacer" />
               <span className="value">
@@ -105,33 +105,33 @@ export class MoneroGraph extends React.Component<Props, State> {
           </div>
         </div>
         <div className="flex-spacer" />
-        <LineGraph id="xmr-price-graph" data={data} width={width} height={height} />
+        <LineGraph id="wazn-price-graph" data={data} width={width} height={height} />
       </div>
     ) : (
       // Skeleton graph
-      <div className="xmr-price">
-        <div className="xmr-price-header">
-          <p className="title">Monero Price</p>
+      <div className="wazn-price">
+        <div className="wazn-price-header">
+          <p className="title">WAZN Price</p>
           <div className="flex-spacer" />
           <p className="time">7d</p>
         </div>
-        <div className="xmr-price-data" aria-hidden={true}>
+        <div className="wazn-price-data" aria-hidden={true}>
           <div className="left">
-            <h2 className="xmr-price-data-current skeleton">—————</h2>
+            <h2 className="wazn-price-data-current skeleton">—————</h2>
             <p
-              className={`xmr-price-data-difference ${diff > 0 ? 'positive' : 'negative'} skeleton`}
+              className={`wazn-price-data-difference ${diff > 0 ? 'positive' : 'negative'} skeleton`}
             >
               —————
             </p>
           </div>
           <div className="flex-spacer" />
           <div className="right">
-            <div className="xmr-price-data-high">
+            <div className="wazn-price-data-high">
               <span className="label skeleton">———</span>
               <div className="flex-spacer" />
               <span className="value skeleton">—————</span>
             </div>
-            <div className="xmr-price-data-low">
+            <div className="wazn-price-data-low">
               <span className="label skeleton">———</span>
               <div className="flex-spacer" />
               <span className="value skeleton">—————</span>
@@ -140,7 +140,7 @@ export class MoneroGraph extends React.Component<Props, State> {
         </div>
         <div className="flex-spacer" />
         <LineGraph
-          id="xmr-price-graph"
+          id="wazn-price-graph"
           data={[[0, 0, 0], [1, 0, 0]]}
           width={width}
           height={height}

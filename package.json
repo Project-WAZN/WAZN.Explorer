@@ -1,7 +1,7 @@
 {
-  "name": "MoneroVision",
-  "version": "1.0.0",
-  "description": "A blockchain explorer front-end for Monero",
+  "name": "WAZN Explorer",
+  "version": "0.9.0",
+  "description": "A blockchain explorer front-end for WAZN",
   "main": "index.js",
   "engines": {
     "node": ">= 8.0.0",
